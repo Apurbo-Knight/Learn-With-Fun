@@ -1,0 +1,33 @@
+
+import { NavLink } from "react-router-dom";
+
+
+const Support = () => {
+  
+  return (
+    <div className=" mb-10">
+      <h2 className="animate__animated animate__fadeIn animate__repeat-2 text-center font-bold text-3xl text-blue-600 mb-8">
+        Support
+      </h2>
+      <p>
+        Welcome to the Support Center! We're here to make your language learning
+        journey as smooth and enjoyable as possible. Whether you're a beginner
+        just starting out or an advanced learner refining your skills, our
+        resources and dedicated team are ready to assist you every step of the
+        way. <br />
+        Learning a new language can be exciting but also challenging, and that’s
+        why we’re here to ensure you have the support you need to stay motivated
+        and focused. From resolving technical issues to providing guidance on
+        using our features, our Support Center is designed to be your go-to
+        resource. <br />
+        Explore our FAQs for quick answers, dive into detailed how-to guides, or
+        connect with our friendly support team for personalized assistance. We
+        understand that every learner’s journey is unique, and we’re committed
+        to helping you overcome any obstacles you may encounter.
+      </p>
+      <button className="btn my-4 bg-blue-500"><NavLink>Go To Support</NavLink></button>
+    </div>
+  );
+};
+
+export default Support;
