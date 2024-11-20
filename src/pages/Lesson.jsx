@@ -6,10 +6,10 @@ import DataCard from '../components/DataCard';
 
 const Lesson = () => {
     const obj = useParams()
-    console.log(obj)
+    // console.log(obj)
     
     const data = useLoaderData()
-    console.log(data)
+    // console.log(data)
 
     return (
         <div>

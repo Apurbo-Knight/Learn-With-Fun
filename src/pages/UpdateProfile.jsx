@@ -8,11 +8,12 @@ const UpdateProfile = () => {
     const {user,handleRegister} = useContext(authContext)
     const [update,setUpdate] = useState("")
     const handleUpdateProfile = (e)=>{
+      setUpdate("")
         e.preventDefault()
         const name = e.target.name.value
         const image = e.target.image.value
         handleRegister(user.name,user.image)
-        console.log(user.name, user.image);
+        // console.log(user.name, user.image);
         const profile ={
             displayName:name,
             photoURL:image    

@@ -8,10 +8,12 @@ const AuthProvider = ({children}) => {
     const googleProvider = new GoogleAuthProvider()
 
     const [user,setUser]= useState(null)
+    console.log((user));
+    // const [refatch, setrefatch] = useState(null)
 
     const [loading,setLoading]= useState(true)
 
-    const handleRegister = (email,password,name,image)=>{
+    const handleRegister = (email,password)=>{
        return createUserWithEmailAndPassword(auth,email,password)
     }
 
@@ -23,11 +25,9 @@ const AuthProvider = ({children}) => {
        return signInWithPopup(auth,googleProvider)
     }
 
-    // const manageProfile = (user)=>{
-    //    return updateProfile(auth.currentUser,{
-    //         displayName:user?.name,photoUrl:user?.image
-    //     })
-    // }
+    const manageProfile = (updatedData)=>{
+       return updateProfile(auth.currentUser,updatedData)
+    }
 
     const handleLogout =()=>{
         signOut(auth)
@@ -38,10 +38,11 @@ const AuthProvider = ({children}) => {
         handleLogout,
         handleRegister,
         handleGoogleLogin,
-        // manageProfile,
+        manageProfile,
         user,
         setUser,
-        loading
+        loading,
+        // setrefatch
     }
 
     useEffect(()=>{

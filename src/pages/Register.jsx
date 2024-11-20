@@ -1,13 +1,14 @@
 import React, { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { authContext } from "../components/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const {handleRegister,handleGoogleLogin}= useContext(authContext)
+  const {handleRegister,handleGoogleLogin,manageProfile,user}= useContext(authContext)
   const [error,setError]=useState("")
   const [show,setShow]= useState(false)
+  const navigate = useNavigate()
   const handleSubmit= (e)=>{
     e.preventDefault()
     setError('')
@@ -31,12 +32,17 @@ const Register = () => {
         setError("Password must contain at least one Uppercase letter")
         return;
     }
-    console.log(name,image,email,password);
+    // console.log(name,image,email,password);
 
     handleRegister(email,password)
-    // .then(res =>{
-    //   manageProfile(name,image)
-    // })
+    .then(res =>{
+      manageProfile({displayName:name , photoURL:image})
+      // const u=res.user
+      // console.log(u);
+      setUser(res)
+      navigate(location?.state ? location.state:'/')
+      
+    })
   }
   return (
     <div className="bg-gray-200">

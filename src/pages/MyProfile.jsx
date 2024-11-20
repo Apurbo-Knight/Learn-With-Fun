@@ -13,9 +13,9 @@ const MyProfile = () => {
           <div>
             <p className="font-bold text-3xl mb-5 text-blue-500">Name: {user?.displayName}</p>
             <p className="font-bold text-3xl mb-5 text-blue-500">Email: {user?.email}</p>
-            <div className="flex  gap-10">
-              <span className="font-bold text-3xl text-blue-500">Photo:</span>
-              <img className="size-40" src={user?.photoURL} alt="" />
+            <div className="flex items-center gap-10">
+              <span className=" font-bold text-3xl text-blue-500">Photo:</span>
+              <img className="size-40 rounded-full" src={user?.photoURL} alt="" />
             </div>
           </div>
         </div>
