@@ -9,7 +9,7 @@ const About = () => {
       <section id="mission" className=" p-6  ">
       <div className="flex flex-col items-center mt-5">
         <img className="size-10" src={mission} alt="" />
-        <h2 className="text-3xl font-bold mb-4 text-blue-600  text-center ">
+        <h2 className="text-3xl font-bold mb-4 text-blue-600  text-center animate__animated animate__bounce">
           Our Mission
         </h2>
       </div>
@@ -34,7 +34,7 @@ const About = () => {
       <section className="py-10">
       <div className="flex flex-col items-center mt-5">
         <img className="size-10" src={zoom} alt="" />
-        <h2 className="text-3xl font-bold mb-4 text-blue-600  text-center ">
+        <h2 className="text-3xl font-bold mb-4 text-blue-600  text-center animate__animated animate__bounce">
         We Can Learn Vocabulary In The Following Ways
         </h2>
       </div>

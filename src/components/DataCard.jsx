@@ -10,8 +10,8 @@ const DataCard = ({ d }) => {
   // console.log(d);
   return (
     <div  className={`card  shadow-xl ${d.difficulty ==="easy"?'bg-green-300': d.difficulty==="medium"?"bg-blue-300": "bg-red-300"}`}>
-      <div onClick={()=>pronounceWord(d.word)}  className="card-body">
-        <h2 className="card-title">Word: {d.word}</h2>
+        <div className="card-body">
+        <h2 onClick={()=>pronounceWord(d.word)} className="card-title">Word: {d.word}</h2>
         <p className="font-semibold">Meaning: {d.meaning}</p>
         <p className="font-semibold">Pronunciation: {d.pronunciation}</p>
         <p className="font-semibold"> Part Of Speech: {d.part_of_speech}</p>

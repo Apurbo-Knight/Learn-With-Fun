@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import { authContext } from "../components/AuthProvider";
 import { sendPasswordResetEmail } from "firebase/auth";
 import auth from "../firebase/firebase.config";
+import {  toast } from 'react-toastify';
 
 const Login = () => {
   const {handleGoogleLogin,handleLogin,handleLogout} = useContext(authContext)
@@ -21,8 +22,10 @@ const Login = () => {
     handleLogin(email,password)
     .then(res=>{
       navigate(location?.state?.from)
+      toast("Loged In")
     })
     .catch(err=>{
+      toast("Invalid Email or Password")
           setError(err)
     })
   };
@@ -37,12 +40,12 @@ const Login = () => {
     // console.log("give me a email",emailRef.current.value);
     const email = emailRef.current.value;
     if(!email){
-      alert("Please Provide a valid email address")
+      toast("Please Provide a valid email address")
     }
     else{
       sendPasswordResetEmail(auth,email)
       .then(()=>{
-        alert("Password Reset email sent, please check your email")
+        toast("Password Reset email sent, please check your email")
       })
     }
   }
@@ -68,7 +71,7 @@ const Login = () => {
                 type="email"
                 placeholder="email"
                 className="input input-bordered"
-                required
+                // required
               />
             </div>
             <div className="form-control">

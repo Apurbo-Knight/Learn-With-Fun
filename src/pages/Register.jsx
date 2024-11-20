@@ -5,7 +5,7 @@ import { authContext } from "../components/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const {handleRegister,handleGoogleLogin,manageProfile,user,setRefatch}= useContext(authContext)
+  const {handleRegister,handleGoogleLogin,manageProfile,user,setUser}= useContext(authContext)
   const [error,setError]=useState("")
   const [show,setShow]= useState(false)
   const navigate = useNavigate()
@@ -37,8 +37,9 @@ const Register = () => {
     handleRegister(email,password)
     .then(res =>{
       manageProfile({displayName:name , photoURL:image})
-      setRefatch()
-      // setUser(res)
+      // setRefatch()
+      // console.log(res);
+      setUser(res)
       // const u=res.user
       // console.log(u);
       navigate(location?.state ? location.state:'/')
@@ -51,7 +52,7 @@ const Register = () => {
             <Navbar></Navbar>
         </div>
       <div className="min-h-screen flex justify-center items-center">
-        <div className=" rounded-xl card bg-base-100 w-full max-w-sm shrink-0 rounded-none p-10">
+        <div className=" rounded-xl card bg-base-100 w-full max-w-sm shrink-0  p-10">
           <h2 className="text-2xl font-semibold text-center">
             Register Your Account
           </h2>
