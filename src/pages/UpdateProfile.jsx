@@ -62,7 +62,7 @@ const UpdateProfile = () => {
               
             </div> 
             <p className="font-bold text-green-500 text-center">{update}</p>
-            <button type="submit" className="btn bg-blue-500">Update Profile</button>
+            <button type="submit" className="btn bg-gradient-to-r from-purple-500 to-blue-500">Update Profile</button>
           </form>
           
         </div>

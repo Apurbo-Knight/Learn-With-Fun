@@ -7,7 +7,7 @@ const Navbar = () => {
   const {user,handleLogout}=useContext(authContext)
   // console.log(user?.photoURL);
   return (
-    <div className="navbar  w-10/12 mx-auto bg-blue-400 mb">
+    <div className="navbar  w-10/12 mx-auto bg-blue-400 rounded-md">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -56,10 +56,10 @@ const Navbar = () => {
             user?.email ? (
               <div className="flex items-center gap-4">
                 <img className="rounded-full size-12" src={user?.photoURL} alt="" />
-                <button className="btn btn-neutral rounded-none" onClick={handleLogout}>Logout</button>
+                <button className="btn  bg-blue-300 rounded-md" onClick={handleLogout}>Logout</button>
               </div>
             ):(
-              <NavLink to="/login" className="btn btn-neutral rounded-none">
+              <NavLink to="/login" className="btn bg-blue-300 rounded-md">
             Login
           </NavLink>
             )

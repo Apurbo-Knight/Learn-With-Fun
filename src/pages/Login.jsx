@@ -52,8 +52,8 @@ const Login = () => {
       <div>
         <Navbar></Navbar>
       </div>
-      <div className=" min-h-screen flex justify-center items-center">
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 rounded-none p-10">
+      <div className="  min-h-screen flex justify-center items-center">
+        <div className="rounded-xl card bg-base-100 w-full max-w-sm shrink-0  p-10">
           <h2 className="text-2xl font-semibold text-center">
             Login Your Account
           </h2>
@@ -89,15 +89,15 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button type="submit" className="btn btn-neutral rounded">Login</button>
+              <button type="submit" className="btn bg-gradient-to-r from-purple-500 to-blue-500 rounded-md text-gray-100">Login</button>
             </div>
+          {error && <p className="text-red-500 font-bold text-center">Invalid Credential</p>}
             
             <div className="form-control mt-6">
-              <button className="btn btn-neutral rounded  " onClick={googleLoginHandler}>Login With Google</button>
+              <button className="btn bg-gradient-to-r from-purple-500 to-blue-500 rounded-md text-gray-100" onClick={googleLoginHandler}>Login With Google</button>
             </div>
 
           </form>
-          {error && <p className="text-red-500 font-bold text-center">Invalid Credential</p>}
           <p className="text-center font-semibold">
             Don't Have An account?
             <NavLink className="text-red-500" to="/register">

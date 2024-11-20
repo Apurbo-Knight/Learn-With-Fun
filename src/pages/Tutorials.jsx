@@ -1,12 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import tutorial from "../assets/tutorial.png"
 
 const Tutorials = () => {
   return (
     <div className="w-10/12 mx-auto">
-      <h2 className="font-bold text-4xl text-center text-blue-500 my-10">
-        Tutorials
-      </h2>
+      <div className="flex flex-col items-center mt-5">
+          <img className="size-10" src={tutorial} alt="" />
+          <h2 className="font-bold text-3xl text-blue-500 mb-5 text-center">Tutorials</h2>
+          </div>
       <div className=" mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <div>
           <iframe
@@ -92,7 +94,7 @@ const Tutorials = () => {
           ></iframe>
         </div>
       </div>
-      <button className="btn bg-blue-500 mx-auto block mb-4">
+      <button className="btn bg-gradient-to-r from-purple-500 to-blue-500 mx-auto block mb-4 text-gray-100">
         <NavLink to="/startLearning">Learn Vocabularies</NavLink>
       </button>
     </div>

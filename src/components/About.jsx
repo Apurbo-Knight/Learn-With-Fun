@@ -1,12 +1,18 @@
 import React from "react";
+import mission from "../assets/mission.png"
+import zoom from "../assets/zoom.png"
+
 
 const About = () => {
   return (
     <div className="mb-10">
       <section id="mission" className=" p-6  ">
-        <h2 className="animate__animated animate__fadeIn animate__repeat-2 text-3xl font-bold mb-4 text-blue-600 text-center">
+      <div className="flex flex-col items-center mt-5">
+        <img className="size-10" src={mission} alt="" />
+        <h2 className="text-3xl font-bold mb-4 text-blue-600  text-center ">
           Our Mission
         </h2>
+      </div>
         <p className="text-lg text-justify">
           Our mission is to empower individuals worldwide to master new
           languages by making learning engaging, accessible, and personalized.
@@ -26,9 +32,12 @@ const About = () => {
 
       {/* Vocabulary Learning Section  */}
       <section className="py-10">
-        <h2 className="text-3xl font-bold mb-6 text-blue-600  text-center animate__animated animate__fadeIn animate__repeat-2">
-          We Can Learn Vocabulary In The Following Ways
+      <div className="flex flex-col items-center mt-5">
+        <img className="size-10" src={zoom} alt="" />
+        <h2 className="text-3xl font-bold mb-4 text-blue-600  text-center ">
+        We Can Learn Vocabulary In The Following Ways
         </h2>
+      </div>
         <ul className="space-y-4 text-lg text-center">
           <li>
             <span className="font-semibold">Interactive Exercises:</span> Engage

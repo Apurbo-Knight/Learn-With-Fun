@@ -22,7 +22,7 @@ const Lesson = () => {
                     data.map((d,idx)=> <DataCard key={idx} d={d}></DataCard>)
                 }
             </div>
-            <button className='btn bg-blue-400 mx-auto block mb-4'><NavLink to="/startLearning">Back To Lesson</NavLink></button>
+            <button className='btn bg-gradient-to-r from-purple-500 to-blue-500 mx-auto block mb-4'><NavLink to="/startLearning">Back To Lesson</NavLink></button>
             <Footer></Footer>
         </div>
     );

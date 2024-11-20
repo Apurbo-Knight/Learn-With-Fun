@@ -1,10 +1,16 @@
 import React from "react";
 
 const DataCard = ({ d }) => {
+
+  function pronounceWord(word) {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = 'hi-IN'; // Japanese
+    window.speechSynthesis.speak(utterance);
+  }
   // console.log(d);
   return (
-    <div className={`card  shadow-xl ${d.difficulty ==="easy"?'bg-green-300': d.difficulty==="medium"?"bg-blue-300": "bg-red-300"}`}>
-      <div className="card-body">
+    <div  className={`card  shadow-xl ${d.difficulty ==="easy"?'bg-green-300': d.difficulty==="medium"?"bg-blue-300": "bg-red-300"}`}>
+      <div onClick={()=>pronounceWord(d.word)}  className="card-body">
         <h2 className="card-title">Word: {d.word}</h2>
         <p className="font-semibold">Meaning: {d.meaning}</p>
         <p className="font-semibold">Pronunciation: {d.pronunciation}</p>

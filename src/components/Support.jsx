@@ -1,14 +1,18 @@
 
 import { NavLink } from "react-router-dom";
+import support from "../assets/support.png"
 
 
 const Support = () => {
   
   return (
     <div className=" mb-10">
-      <h2 className="animate__animated animate__fadeIn animate__repeat-2 text-center font-bold text-3xl text-blue-600 mb-8">
+      <div className="flex flex-col items-center mt-5">
+        <img src={support} alt="" />
+        <h2 className="animate__animated animate__fadeIn animate__repeat-2 text-center font-bold text-3xl text-blue-600 mb-8">
         Support
       </h2>
+      </div>
       <p>
         Welcome to the Support Center! We're here to make your language learning
         journey as smooth and enjoyable as possible. Whether you're a beginner

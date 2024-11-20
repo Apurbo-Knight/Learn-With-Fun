@@ -5,7 +5,7 @@ import { authContext } from "../components/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const {handleRegister,handleGoogleLogin,manageProfile,user}= useContext(authContext)
+  const {handleRegister,handleGoogleLogin,manageProfile,user,setRefatch}= useContext(authContext)
   const [error,setError]=useState("")
   const [show,setShow]= useState(false)
   const navigate = useNavigate()
@@ -37,9 +37,10 @@ const Register = () => {
     handleRegister(email,password)
     .then(res =>{
       manageProfile({displayName:name , photoURL:image})
+      setRefatch()
+      // setUser(res)
       // const u=res.user
       // console.log(u);
-      setUser(res)
       navigate(location?.state ? location.state:'/')
       
     })
@@ -50,7 +51,7 @@ const Register = () => {
             <Navbar></Navbar>
         </div>
       <div className="min-h-screen flex justify-center items-center">
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 rounded-none p-10">
+        <div className=" rounded-xl card bg-base-100 w-full max-w-sm shrink-0 rounded-none p-10">
           <h2 className="text-2xl font-semibold text-center">
             Register Your Account
           </h2>
@@ -110,10 +111,10 @@ const Register = () => {
               
             </div>
             <div className="form-control mt-6">
-              <button type="submit" className="btn btn-neutral rounded-none">Register</button>
+              <button type="submit" className="btn bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg">Register</button>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-neutral rounded  " onClick={handleGoogleLogin}>Login With Google</button>
+              <button className="btn bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg  " onClick={handleGoogleLogin}>Login With Google</button>
             </div>
           </form>
           {error && <p className="text-red-500 text-center font-semibold">{error}</p>}
