@@ -15,6 +15,7 @@
 - react toastify
 - react-countup
 - react-scroll-trigger
+-  react-simple-typewriter
 
 
 

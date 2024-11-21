@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import mission from "../assets/mission.png"
 import zoom from "../assets/zoom.png"
+import { authContext } from "./AuthProvider";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 
 const About = () => {
+  const [text] = useTypewriter({
+    words: ['Lets Learn With Fun'],
+    loop:{}
+  });
+  const {user}=useContext(authContext)
   return (
     <div className="mb-10">
+      {
+        user?<h2 className="font-bold text-4xl text-blue-600 ">Welcome {user?.displayName}. <span className="font-bold">{text}</span><Cursor></Cursor></h2>:""
+      }
       <section id="mission" className=" p-6  ">
       <div className="flex flex-col items-center mt-5">
         <img className="size-10" src={mission} alt="" />
@@ -38,9 +48,10 @@ const About = () => {
         We Can Learn Vocabulary In The Following Ways
         </h2>
       </div>
-        <ul className="space-y-4 text-lg text-center">
-          <li>
-            <span className="font-semibold">Interactive Exercises:</span> Engage
+        <div className="text-center">
+        <ul className="space-y-4 ">
+          <li className="">
+            <span className="font-semibold ">Interactive Exercises:</span> Engage
             with quizzes, flashcards, and matching games with real-time
             feedback.
           </li>
@@ -71,6 +82,7 @@ const About = () => {
             vocabulary in interactive dialogues and role-playing exercises.
           </li>
         </ul>
+        </div>
       </section>
     </div>
   );

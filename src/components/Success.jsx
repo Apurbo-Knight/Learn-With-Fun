@@ -9,7 +9,7 @@ const Success = () => {
     <div className="pb-10">
       <div className="flex flex-col items-center mt-5">
         <img className="size-10" src={success} alt="" />
-        <h2 className="text-3xl font-bold mb-4 text-blue-600  text-center ">
+        <h2 className="text-3xl font-bold mb-4 text-blue-600 animate__animated animate__bounce text-center ">
           Success
         </h2>
       </div>

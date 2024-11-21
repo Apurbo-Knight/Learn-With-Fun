@@ -7,7 +7,7 @@ const Navbar = () => {
   const {user,handleLogout}=useContext(authContext)
   // console.log(user?.photoURL);
   return (
-    <div className="navbar  w-10/12 mx-auto bg-blue-400 rounded-md">
+    <div className="navbar  w-10/12 mx-auto bg-blue-400 rounded-md mb-5 sticky top-1 ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -39,7 +39,7 @@ const Navbar = () => {
             
           </ul>
         </div>
-        <h2 className="font-semibold text-2xl animate__animated animate__bounce ">Learn With Fun</h2>
+        <h2 className="font-semibold text-2xl animate__animated animate__bounce bg-gradient-to-r from-purple-900 to-blue-700 bg-clip-text text-transparent">Learn With Fun</h2>
       </div>
       <div className="navbar-center gap-5 font-semibold hidden lg:flex">
         <NavLink to="/">Home</NavLink>
@@ -56,10 +56,10 @@ const Navbar = () => {
             user?.email ? (
               <div className="flex items-center gap-4">
                 <img className="rounded-full size-12" src={user?.photoURL} alt="" />
-                <button className="btn  bg-blue-300 rounded-md text-white" onClick={handleLogout}>Logout</button>
+                <button className="btn  bg-gradient-to-r from-purple-500 to-blue-500  rounded-md text-white" onClick={handleLogout}>Logout</button>
               </div>
             ):(
-              <NavLink to="/login" className="btn bg-blue-300 rounded-md text-white">
+              <NavLink to="/login" className="btn bg-gradient-to-r from-purple-500 to-blue-500  rounded-md text-white">
             Login
           </NavLink>
             )
