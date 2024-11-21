@@ -1,9 +1,9 @@
-import { useContext } from "react";
+
 import img1 from "../assets/std1.jpg";
 import img2 from "../assets/std2.jpg";
 import img3 from "../assets/std3.jpg";
 import img4 from "../assets/std4.jpg";
-import { authContext } from "./AuthProvider";
+
 
 const Banner = () => {
   
