@@ -1,8 +1,20 @@
-# React + Vite
+# Project Name
+- Learn With Fun  
+# Purpose of this Project
+- Teaching Hindi Language In a Best Way
+# Live Website Link
+- https://melodious-starship-e65f44.netlify.app/
+#  5 features of your website/project.
+- Login Feature. No one can see Lessons with out Login   
+- 10 different lesson to learn Hindi language.
+- In lesson section, the information of every word is in a car form. which is very   easy to understand for learner.  
+- Clicking on the word learner can hear the pronounciation of the word.
+- There is a tutorial section . Where we provide some videos to learn Hindi language . 
+#  npm packages I have used
+- Animate.css
+- react toastify
+- react-countup
+- react-scroll-trigger
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
