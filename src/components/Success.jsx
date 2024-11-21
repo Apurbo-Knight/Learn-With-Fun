@@ -19,31 +19,31 @@ const Success = () => {
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5 text-center">
           <div className="bg-gradient-to-r from-purple-500 to-blue-500 py-5 rounded-xl">
-            <h2 className="text-5xl font-bold">
+            <h2 className="text-5xl font-bold text-white">
               {counterState && <CountUp start={0} end={50}></CountUp>}
             </h2>
-            <p className="font-semibold text-gray-700 pt-2">Users</p>
+            <p className="font-semibold text-white pt-2">Users</p>
           </div>
           <div className="bg-gradient-to-r from-purple-500 to-blue-500 py-5 rounded-xl">
-            <h2 className="text-5xl font-bold">
-              {" "}
+            <h2 className="text-5xl font-bold text-white">
+              
               {counterState && <CountUp start={0} end={10}></CountUp>}
             </h2>
-            <p className="font-semibold text-gray-700 pt-2"> Lesson</p>
+            <p className="font-semibold  pt-2 text-white"> Lesson</p>
           </div>
           <div className="bg-gradient-to-r from-purple-500 to-blue-500 py-5 rounded-xl">
-            <h2 className="text-5xl font-bold">
-              {" "}
+            <h2 className="text-5xl font-bold text-white">
+              
               {counterState && <CountUp start={0} end={200}></CountUp>}
             </h2>
-            <p className="font-semibold text-gray-700 pt-2">Vocabulary</p>
+            <p className="font-semibold  pt-2 text-white">Vocabulary</p>
           </div>
           <div className="bg-gradient-to-r from-purple-500 to-blue-500 py-5 rounded-xl">
-            <h2 className="text-5xl font-bold">
-              {" "}
+            <h2 className="text-5xl font-bold text-white">
+              
               {counterState && <CountUp start={0} end={6}></CountUp>}
             </h2>
-            <p className="font-semibold text-gray-700 pt-2">Tutorial</p>
+            <p className="font-semibold text-white pt-2">Tutorial</p>
           </div>
         </div>
       </ScrollTrigger>
