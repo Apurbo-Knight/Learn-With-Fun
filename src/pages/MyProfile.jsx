@@ -19,7 +19,7 @@ const MyProfile = () => {
             </div>
           </div>
         </div>
-        <button className='btn bg-gradient-to-r from-purple-500 to-blue-500 text-white  block mb-4'><NavLink to="/updateProfile">Update</NavLink></button>
+        <NavLink to="/updateProfile"></NavLink><button className='btn bg-gradient-to-r from-purple-500 to-blue-500 text-white  block mb-4'>Update</button><NavLink></NavLink>
       </div>
     </div>
   );
