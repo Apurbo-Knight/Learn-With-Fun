@@ -104,7 +104,7 @@ const StartLearning = () => {
       </div>
       </div>
 
-      <button className='btn bg-gradient-to-r from-purple-500 to-blue-500 mx-auto block my-6'><NavLink to="/tutorials">View More</NavLink></button>
+      <button className='btn bg-gradient-to-r from-purple-500 to-blue-500 mx-auto block my-6 text-white'><NavLink to="/tutorials">View More</NavLink></button>
 
     </div>
   );

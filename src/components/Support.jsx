@@ -29,7 +29,9 @@ const Support = () => {
         understand that every learner’s journey is unique, and we’re committed
         to helping you overcome any obstacles you may encounter.
       </p>
-      <button className="btn my-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white"><NavLink>Go To Support</NavLink></button>
+      <div className="text-center">
+      <button className="btn my-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white "><NavLink>Go To Support</NavLink></button>
+      </div>
     </div>
   );
 };

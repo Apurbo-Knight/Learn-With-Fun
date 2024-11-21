@@ -34,7 +34,7 @@ const Navbar = () => {
             <NavLink to="/startLearning">Start-Learning</NavLink>
             <NavLink to="/tutorials">Tutorials</NavLink>
             {
-              (user?.email && <NavLink to="/myprofile">My Profile</NavLink>)
+              (user?.email && <NavLink  to="/myprofile">My Profile</NavLink>)
             }
             
           </ul>
@@ -56,10 +56,10 @@ const Navbar = () => {
             user?.email ? (
               <div className="flex items-center gap-4">
                 <img className="rounded-full size-12" src={user?.photoURL} alt="" />
-                <button className="btn  bg-blue-300 rounded-md" onClick={handleLogout}>Logout</button>
+                <button className="btn  bg-blue-300 rounded-md text-white" onClick={handleLogout}>Logout</button>
               </div>
             ):(
-              <NavLink to="/login" className="btn bg-blue-300 rounded-md">
+              <NavLink to="/login" className="btn bg-blue-300 rounded-md text-white">
             Login
           </NavLink>
             )
