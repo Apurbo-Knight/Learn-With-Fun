@@ -14,7 +14,7 @@ const About = () => {
   return (
     <div className="mb-10">
       {
-        user?<h2 className="font-bold text-center text-4xl bg-gradient-to-r from-purple-700 to-blue-500 bg-clip-text text-transparent ">Welcome {user?.displayName}. <span className="font-bold">{text}</span><span className="text-blue-800"><Cursor cursorStyle=">"></Cursor></span></h2>:""
+        user?<h2 className="font-bold text-center text-4xl py-3 bg-gradient-to-r from-purple-700 to-blue-500 bg-clip-text text-transparent ">Welcome {user?.displayName}. <span className="font-bold">{text}</span><span className="text-blue-800"><Cursor cursorStyle=">"></Cursor></span></h2>:""
       }
       <section id="mission" className=" p-6  ">
       <div className="flex flex-col items-center mt-5">

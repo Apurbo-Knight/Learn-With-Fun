@@ -1,13 +1,15 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { authContext } from "./AuthProvider";
+import { BsListNested } from "react-icons/bs";
 
 
 const Navbar = () => {
   const {user,handleLogout}=useContext(authContext)
   // console.log(user?.photoURL);
   return (
-    <div className="navbar  w-10/12 mx-auto bg-blue-400 rounded-md mb-5 sticky top-1 ">
+    <div className="">
+      <div className="navbar  w-10/12 mx-auto bg-blue-400 rounded-md mb-5  ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,11 +32,11 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/startLearning">Start-Learning</NavLink>
-            <NavLink to="/tutorials">Tutorials</NavLink>
+            <button className="btn bg-blue-400 text-purple-800 mb-2"><NavLink to="/">Home</NavLink></button>
+            <button className="btn bg-blue-400 text-purple-800 mb-2"><NavLink to="/startLearning">Start-Learning</NavLink></button>
+            <button className="btn bg-blue-400 text-purple-800 mb-2"><NavLink to="/tutorials">Tutorials</NavLink></button>
             {
-              (user?.email && <NavLink  to="/myprofile">My Profile</NavLink>)
+              (user?.email && <button className="btn bg-blue-400 text-purple-800 mb-2"><NavLink  to="/myprofile">My Profile</NavLink></button> )
             }
             
           </ul>
@@ -42,12 +44,11 @@ const Navbar = () => {
         <h2 className="font-semibold text-2xl animate__animated animate__bounce bg-gradient-to-r from-purple-900 to-blue-700 bg-clip-text text-transparent">Learn With Fun</h2>
       </div>
       <div className="navbar-center gap-5 font-semibold hidden lg:flex">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/startLearning">Start-Learning</NavLink>
-        <NavLink to="/tutorials">Tutorials</NavLink>
-        
-        {
-              (user?.email && <NavLink to="/myprofile">My Profile</NavLink>)
+      <button className=" bg-blue-400 text-purple-800 mb-2"><NavLink to="/">Home</NavLink></button>
+            <button className=" bg-blue-400 text-purple-800 mb-2"><NavLink to="/startLearning">Start-Learning</NavLink></button>
+            <button className=" bg-blue-400 text-purple-800 mb-2"><NavLink to="/tutorials">Tutorials</NavLink></button>
+            {
+              (user?.email && <button className=" bg-blue-400 text-purple-800 mb-2"><NavLink  to="/myprofile">My Profile</NavLink></button> )
             }
       </div>
       <div className="navbar-end">
@@ -66,6 +67,7 @@ const Navbar = () => {
           }
         </div>
       </div>
+    </div>
     </div>
   );
 };

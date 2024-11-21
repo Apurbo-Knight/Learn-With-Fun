@@ -21,7 +21,7 @@ const Login = () => {
 
     handleLogin(email,password)
     .then(res=>{
-      navigate(location?.state?.from)
+      navigate(location?.state ? location.state:'/')
       toast("Loged In")
     })
     .catch(err=>{
@@ -32,7 +32,7 @@ const Login = () => {
   const googleLoginHandler=()=>{
     handleGoogleLogin()
     .then(res=>{
-      navigate(location?.state?.from)
+      navigate(location?.state ? location.state:'/')
     })
   }
 
