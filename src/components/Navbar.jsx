@@ -35,6 +35,8 @@ const Navbar = () => {
             <button className="btn bg-blue-400 text-purple-800 mb-2"><NavLink to="/">Home</NavLink></button>
             <button className="btn bg-blue-400 text-purple-800 mb-2"><NavLink to="/startLearning">Start-Learning</NavLink></button>
             <button className="btn bg-blue-400 text-purple-800 mb-2"><NavLink to="/tutorials">Tutorials</NavLink></button>
+            <button className="btn bg-blue-400 text-purple-800 mb-2"><NavLink to="#">About Us</NavLink></button>
+            
             {
               (user?.email && <button className="btn bg-blue-400 text-purple-800 mb-2"><NavLink  to="/myprofile">My Profile</NavLink></button> )
             }
@@ -47,6 +49,7 @@ const Navbar = () => {
       <button className=" bg-blue-400 text-purple-800 mb-2"><NavLink to="/">Home</NavLink></button>
             <button className=" bg-blue-400 text-purple-800 mb-2"><NavLink to="/startLearning">Start-Learning</NavLink></button>
             <button className=" bg-blue-400 text-purple-800 mb-2"><NavLink to="/tutorials">Tutorials</NavLink></button>
+            <button className=" bg-blue-400 text-purple-800 mb-2"><NavLink to="#">About Us</NavLink></button>
             {
               (user?.email && <button className=" bg-blue-400 text-purple-800 mb-2"><NavLink  to="/myprofile">My Profile</NavLink></button> )
             }

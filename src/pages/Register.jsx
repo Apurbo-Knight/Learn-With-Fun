@@ -37,10 +37,10 @@ const Register = () => {
     handleRegister(email,password)
     .then(res =>{
       
+      const user= (res.user);
+      setUser(user)
       manageProfile({displayName:name , photoURL:image})
       // setRefatch()
-      console.log(res);
-      setUser()
       
       navigate(location?.state ? location.state:'/')
       
