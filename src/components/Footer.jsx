@@ -1,4 +1,7 @@
 import React from "react";
+import facebook from '../assets/facebook.png'
+import insta from '../assets/instagram.png'
+import twitter from '../assets/twitter.png'
 
 const Footer = () => {
   return (
@@ -10,11 +13,11 @@ const Footer = () => {
           <p>
             Email:{" "}
             <a href="mailto:contact@example.com" className="text-blue-400">
-              contact@example.com
+              akdjoy29@gmail.com
             </a>
           </p>
-          <p>Phone: +123 456 7890</p>
-          <p>Address: 123 Street, City, Country</p>
+          <p>Phone: 01775888111</p>
+          <p>Address: Motijheel, Dhaka</p>
         </div>
 
         {/* Social Media Links */}
@@ -27,7 +30,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Facebook
+              <img src={facebook} alt="" />
             </a>
             <a
               href="https://twitter.com"
@@ -35,7 +38,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Twitter
+              <img src={twitter} alt="" />
             </a>
             <a
               href="https://instagram.com"
@@ -43,7 +46,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Instagram
+              <img src={insta} alt="" />
             </a>
           </div>
         </div>
@@ -51,7 +54,7 @@ const Footer = () => {
         {/* Copyright Notice */}
         <div>
           <p className="text-sm text-gray-400 mt-4 md:mt-0">
-            &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+            &copy; {new Date().getFullYear()} All rights reserved.
           </p>
         </div>
       </div>

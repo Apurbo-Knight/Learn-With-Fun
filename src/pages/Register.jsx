@@ -36,12 +36,12 @@ const Register = () => {
 
     handleRegister(email,password)
     .then(res =>{
+      
       manageProfile({displayName:name , photoURL:image})
       // setRefatch()
-      // console.log(res);
-      setUser(res)
-      // const u=res.user
-      // console.log(u);
+      console.log(res);
+      setUser()
+      
       navigate(location?.state ? location.state:'/')
       
     })

@@ -7,7 +7,7 @@ import auth from "../firebase/firebase.config";
 import {  toast } from 'react-toastify';
 
 const Login = () => {
-  const {handleGoogleLogin,handleLogin,handleLogout} = useContext(authContext)
+  const {handleGoogleLogin,handleLogin} = useContext(authContext)
   const [error,setError]=useState("")
   const emailRef = useRef();
   const location =useLocation()
