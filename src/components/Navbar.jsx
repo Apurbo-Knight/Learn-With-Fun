@@ -39,7 +39,7 @@ const Navbar = () => {
             
           </ul>
         </div>
-        <h2 className="font-semibold text-2xl animate__animated animate__bounce">Lingo Bingo</h2>
+        <h2 className="font-semibold text-2xl animate__animated animate__bounce ">Learn With Fun</h2>
       </div>
       <div className="navbar-center gap-5 font-semibold hidden lg:flex">
         <NavLink to="/">Home</NavLink>
