@@ -1,15 +1,15 @@
 # Project Name
 - Learn With Fun  
 # Purpose of this Project
-- Teaching Hindi Language In a Best Way
+- Teaching Hindi Language In the Best Way
 # Live Website Link
-- https://melodious-starship-e65f44.netlify.app/
+- https://learnwith-fun.netlify.app/
 #  5 features of your website/project.
-- Login Feature. No one can see Lessons with out Login.   
-- 10 different lesson to learn Hindi language.
-- In lesson section, the information of every word is in a card form. Which is very easy to understand for learner.  
-- Clicking on the word learner can hear the pronounciation of the word.
-- There is a tutorial section . Where we provide some videos to learn Hindi language . 
+- Login Feature. No one can see Lessons without a Login.   
+- 10 different lessons to learn the Hindi language.
+- In the lesson section, the information about every word is on a card form. This is very easy to understand for a learner.  
+- Clicking on the word learner can hear the pronunciation of the word.
+- There is a tutorial section. We provide some videos to learn the Hindi language. 
 #  npm packages I have used
 - Animate.css
 - react toastify
