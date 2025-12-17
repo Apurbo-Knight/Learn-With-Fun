@@ -1,49 +1,56 @@
 import React, { useState } from "react";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
-import success from "../assets/success.png"
 
 const Success = () => {
   const [counterState, setCounterState] = useState(false);
+
   return (
-    <div className="pb-10">
-      <div className="flex flex-col items-center mt-5">
-        <img className="size-10" src={success} alt="" />
-        <h2 className="text-3xl font-bold mb-4 text-blue-600 animate__animated animate__bounce text-center ">
+    <div className="pt-20 px-10 bg-gradient-to-b from-pink-50 to-white">
+      <div className="text-center mb-10">
+        <h2 className="text-4xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent animate__animated animate__bounce">
           Success
         </h2>
+        <p className="text-gray-500 mt-3 text-lg">
+          Our milestones reflect our learners’ progress
+        </p>
       </div>
+
       <ScrollTrigger
         onEnter={() => setCounterState(true)}
-        onExit={() => setCounterState(false)}
+        onExit={() => setCounterState(false)} 
       >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 text-center">
-          <div className="bg-gradient-to-r from-purple-500 to-blue-500 py-5 rounded-xl">
-            <h2 className="text-5xl font-bold text-white">
-              {counterState && <CountUp start={0} end={50}></CountUp>}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto text-center">
+          {/* Card 1 */}
+          <div className="bg-white/70 backdrop-blur-md rounded-2xl shadow-lg shadow-pink-200/50 border border-pink-100 py-10 transition-transform duration-300 hover:-translate-y-1">
+            <h2 className="text-5xl font-bold text-pink-600">
+              {counterState && <CountUp start={0} end={500} duration={2} />}+
             </h2>
-            <p className="font-semibold text-white pt-2">Users</p>
+            <p className="font-semibold text-gray-600 mt-2">Users</p>
           </div>
-          <div className="bg-gradient-to-r from-purple-500 to-blue-500 py-5 rounded-xl">
-            <h2 className="text-5xl font-bold text-white">
-              
-              {counterState && <CountUp start={0} end={10}></CountUp>}
+
+          {/* Card 2 */}
+          <div className="bg-white/70 backdrop-blur-md rounded-2xl shadow-lg shadow-yellow-200/50 border border-yellow-100 py-10 transition-transform duration-300 hover:-translate-y-1">
+            <h2 className="text-5xl font-bold text-yellow-600">
+              {counterState && <CountUp start={0} end={10} duration={2} />}+
             </h2>
-            <p className="font-semibold  pt-2 text-white"> Lesson</p>
+            <p className="font-semibold text-gray-600 mt-2">Lessons</p>
           </div>
-          <div className="bg-gradient-to-r from-purple-500 to-blue-500 py-5 rounded-xl">
-            <h2 className="text-5xl font-bold text-white">
-              
-              {counterState && <CountUp start={0} end={200}></CountUp>}
+
+          {/* Card 3 */}
+          <div className="bg-white/70 backdrop-blur-md rounded-2xl shadow-lg shadow-blue-200/50 border border-blue-100 py-10 transition-transform duration-300 hover:-translate-y-1">
+            <h2 className="text-5xl font-bold text-blue-600">
+              {counterState && <CountUp start={0} end={1000} duration={2.5} />}+
             </h2>
-            <p className="font-semibold  pt-2 text-white">Vocabulary</p>
+            <p className="font-semibold text-gray-600 mt-2">Vocabulary</p>
           </div>
-          <div className="bg-gradient-to-r from-purple-500 to-blue-500 py-5 rounded-xl">
-            <h2 className="text-5xl font-bold text-white">
-              
-              {counterState && <CountUp start={0} end={6}></CountUp>}
+
+          {/* Card 4 */}
+          <div className="bg-white/70 backdrop-blur-md rounded-2xl shadow-lg shadow-green-200/50 border border-green-100 py-10 transition-transform duration-300 hover:-translate-y-1">
+            <h2 className="text-5xl font-bold text-green-600">
+              {counterState && <CountUp start={0} end={60} duration={2} />}+
             </h2>
-            <p className="font-semibold text-white pt-2">Tutorial</p>
+            <p className="font-semibold text-gray-600 mt-2">Tutorials</p>
           </div>
         </div>
       </ScrollTrigger>
