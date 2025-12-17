@@ -17,7 +17,7 @@ const Lesson = () => {
                 <Navbar></Navbar>
             </nav>
             <h2 className="pt-20 text-center font-bold text-4xl bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent my-8">Lesson-{obj.lesson_no}</h2>
-            <h2 className=' mx-auto text-center font-semibold text-2xl bg-gradient-to-r from-purple-500 pb-3 to-blue-500 bg-clip-text text-transparent mb-5'>Clicking On Each Word You Can Hear the Pronunciation of the word</h2>
+            <h2 className=' mx-auto text-center font-semibold text-2xl bg-gradient-to-r from-purple-500 pb-3 to-blue-500 bg-clip-text text-transparent mb-5'>Clicking On Each Word, You Can Hear the Pronunciation of the word</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  max-w-screen-2xl px-10 gap-5 mx-auto mb-10'>
                 {
                     data.map((d,idx)=> <DataCard key={idx} d={d}></DataCard>)

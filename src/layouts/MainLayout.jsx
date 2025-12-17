@@ -7,7 +7,7 @@ import Success from '../components/Success';
 
 const MainLayout = () => {
     return (
-        <div className=" bg-base-100  mx-auto">
+        <div className=" bg-base-100  mx-auto overflow-x-hidden">
             <Banner></Banner>
             <About></About>
             <Success></Success>
