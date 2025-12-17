@@ -10,7 +10,6 @@ const Importance = () => {
       </h2>
 
       <div className="space-y-6">
-        {/* 1️⃣ Communication Skills */}
         <div className="bg-white/80 backdrop-blur-lg border border-pink-100 rounded-2xl shadow-lg shadow-pink-100/50 hover:shadow-pink-300/50 transition duration-300 p-6">
           <div className="flex items-center gap-3 mb-2">
             <BiMessageSquare className="text-pink-500 w-7 h-7" />
@@ -26,7 +25,6 @@ const Importance = () => {
           </p>
         </div>
 
-        {/* 2️⃣ Job Market */}
         <div className="bg-white/80 backdrop-blur-lg border border-yellow-100 rounded-2xl shadow-lg shadow-yellow-100/50 hover:shadow-yellow-300/50 transition duration-300 p-6">
           <div className="flex items-center gap-3 mb-2">
             <BiWorld className="text-yellow-500 w-7 h-7" />
@@ -42,7 +40,6 @@ const Importance = () => {
           </p>
         </div>
 
-        {/* 3️⃣ Travel */}
         <div className="bg-white/80 backdrop-blur-lg border border-blue-100 rounded-2xl shadow-lg shadow-blue-100/50 hover:shadow-blue-300/50 transition duration-300 p-6">
           <div className="flex items-center gap-3 mb-2">
             <BiPlanet className="text-blue-500 w-7 h-7" />
